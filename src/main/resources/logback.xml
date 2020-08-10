@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <appender name="sentry" class="io.sentry.logback.SentryAppender">
+<!--        <dsn>XXX</dsn>-->
+<!--        <debug>true</debug>-->
+    </appender>
+
+    <root level="warn">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="sentry" />
+    </root>
+</configuration>
